@@ -8,6 +8,7 @@
 [![GitHub Stars](https://img.shields.io/github/stars/thedivergentai/Divergent-Skills?style=for-the-badge&logo=github&color=58A6FF)](https://github.com/thedivergentai/Divergent-Skills/stargazers)
 [![License](https://img.shields.io/badge/License-LGPL--3.0-blue?style=for-the-badge)](LICENSE)
 [![Skills](https://img.shields.io/badge/Skills-2-green?style=for-the-badge)](skills/)
+[![Installs](https://img.shields.io/endpoint?url=https://skills.sh/api/badge/thedivergentai/Divergent-Skills&style=for-the-badge&label=INSTALLS&color=F39C12)](https://skills.sh/thedivergentai/Divergent-Skills)
 [![Last Commit](https://img.shields.io/github/last-commit/thedivergentai/Divergent-Skills?style=for-the-badge&color=purple)](https://github.com/thedivergentai/Divergent-Skills/commits/main)
 [![Maintained by](https://img.shields.io/badge/Maintained%20by-Divergent%20AI-bc8cff?style=for-the-badge)](https://github.com/thedivergentai)
 
