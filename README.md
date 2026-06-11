@@ -20,4 +20,4 @@ Replace the repo URL with this repository once published.
 
 ## Audits
 
-Skills are audited against [skill-judge](https://github.com/softaworks/agent-toolkit/tree/main/skills/skill-judge). Reports and naming rules: [`.audit/README.md`](.audit/README.md). WeasyPrint history: [`.audit/weasyprint--index.md`](.audit/weasyprint--index.md).
+Skills are audited against [skill-judge](https://github.com/softaworks/agent-toolkit/tree/main/skills/skill-judge).
