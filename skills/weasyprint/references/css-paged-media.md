@@ -55,7 +55,7 @@ Footnotes: `float: footnote` with `::footnote-marker`, `::footnote-call`, `footn
 | Book left/right | [`examples/book/book.css`](examples/book/book.css) |
 | Invoice footer | [`examples/invoice/invoice.css`](examples/invoice/invoice.css) |
 
-See [`examples/index.md`](examples/index.md) for render commands.
+Humans preview PDFs via `scripts/render-courtbouillon-sample.sh` — see [`resource-matrix.md`](resource-matrix.md) Examples section.
 
 ## Further research
 

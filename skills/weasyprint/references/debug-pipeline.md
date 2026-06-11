@@ -27,7 +27,7 @@ Raise `FatalURLFetchingError` in a custom fetcher when missing stylesheets must 
 1. Enable WARNING-level logging — scan for ignored properties, missing images, font issues.
 2. Check [`css-browser-vs-print.md`](css-browser-vs-print.md) — print media defaults, unsupported selectors, RTL gaps.
 3. Isolate: render with user CSS only, then add HTML, then external assets.
-4. Compare against a minimal example from [`examples/index.md`](examples/index.md).
+4. Compare against a minimal example from [`resource-matrix.md`](resource-matrix.md) Examples catalog.
 
 ## Seven Pipeline Stages
 

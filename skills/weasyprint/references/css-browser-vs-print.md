@@ -53,7 +53,7 @@ Limits: `element()` **`start` parameter not supported**; `footnote-display: comp
 1. Confirm media type and check logs.
 2. Map the failing property to the supported-features matrix in [`full-docs/api_reference.md`](full-docs/api_reference.md) § Supported Features.
 3. Replace unsupported layout (e.g. `box-shadow`, complex grid) with print-native alternatives.
-4. Use official samples in [`examples/index.md`](examples/index.md) for TOC, headers, and `@page` patterns.
+4. Use official samples from [`resource-matrix.md`](resource-matrix.md) Examples catalog for TOC, headers, and `@page` patterns.
 
 ## Further research
 

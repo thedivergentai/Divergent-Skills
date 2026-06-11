@@ -106,7 +106,7 @@ All lessons live at `references/` root — no subfolders. Load **one** file matc
 
 ### Building from a layout pattern
 
-**READ**: [`examples/index.md`](examples/index.md) → sample `.html` + ≤120 lines of `.css` + matching css lesson if stuck
+**READ**: [Examples catalog](#examples-courtbouillon-samples) below → sample `.html` + ≤120 lines of `.css` + matching css lesson if stuck
 
 ---
 
@@ -124,29 +124,58 @@ All lessons live at `references/` root — no subfolders. Load **one** file matc
 | Flask/Django/auth | `web-flask-django.md` | `web-performance.md` | — |
 | CLI one-off | `cli-basics.md` | — | — |
 | Python API | `python-instantiation.md` | `rendering-page-subsets.md` | — |
-| Report + TOC + headers | `examples/index.md` → `report/` | `css-toc-headers.md` | `full-docs/` |
-| Book / chapters | `examples/index.md` → `book/` | `css-paged-media.md` | — |
-| Invoice / receipt | `examples/index.md` → `invoice/` | `pdf-a-archival.md` if PDF/A | — |
-| Poster / flyer | `examples/index.md` → `poster/` | `css-paged-media.md` | — |
-| Ticket / label | `examples/index.md` → `ticket/` | — | — |
-| Letterhead | `examples/index.md` → `letter/` | `css-fonts.md` | — |
+| Report + TOC + headers | `examples/report/` | `css-toc-headers.md` | `full-docs/` |
+| Book / chapters | `examples/book/` | `css-paged-media.md` | — |
+| Invoice / receipt | `examples/invoice/` | `pdf-a-archival.md` if PDF/A | — |
+| Poster / flyer | `examples/poster/` | `css-paged-media.md` | — |
+| Ticket / label | `examples/ticket/` | — | — |
+| Letterhead | `examples/letter/` | `css-fonts.md` | — |
 | Version regression | `debug-version-upgrades.md` | — | Full changelog |
 | Pipeline debug | `debug-pipeline.md` | — | Bulk `full-docs/` |
 
 ---
 
-## Examples Matrix
+## Examples (CourtBouillon samples)
 
-| Sample | Techniques | Pair with |
-|--------|------------|-----------|
-| `report/` | `@page`, `string-set`, TOC `target-*`, columns | `css-toc-headers.md` |
-| `book/` | Named pages, L/R footers | `css-paged-media.md` |
-| `invoice/` | Invoice table, `@page` footers | `pdf-a-archival.md` if archival |
-| `poster/` | Custom page size, `-s` stylesheet swap | `css-paged-media.md` |
-| `ticket/` | Fixed landscape ticket | `css-paged-media.md` |
-| `letter/` | Letterhead, zero margin | `css-fonts.md` |
+Official reference implementations from [CourtBouillon/weasyprint-samples](https://github.com/CourtBouillon/weasyprint-samples) at `references/examples/`. Sample code/CSS public domain; fonts have their own licenses; book text © Madcats.
 
-Detail: [`examples/index.md`](examples/index.md). **No `.pdf` in repo** — generate with `printall.sh`.
+**Agents**: read `.html` and `.css` only — QA'd layout patterns to adapt. **Do NOT load** `.pdf` binaries. Budget: ≤120 lines of relevant `.css` per sample.
+
+**Humans** (preview PDFs locally from skill root; PDFs are not committed):
+
+```bash
+sh scripts/render-courtbouillon-sample.sh report
+sh scripts/render-all-courtbouillon-samples.sh
+```
+
+Windows: `.\scripts\render-courtbouillon-sample.ps1 report` · `.\scripts\render-all-courtbouillon-samples.ps1`
+
+Samples: `ticket`, `report`, `poster`, `flyer`, `letter`, `invoice`, `book`, `book-classical`.
+
+### Sample catalog
+
+| Sample | Files | Demonstrates |
+|--------|-------|--------------|
+| [`report/`](examples/report/) | `report.html`, `report.css` | `@page` margin boxes, `:blank`, named pages (`page: chapter`, `no-chapter`), `string-set` running headers, TOC with `target-text()` + `target-counter()`, multi-column (`columns: 2`), cover `@page :first` background, `@font-face`, CSS variables, SVG figures, internal links |
+| [`book/`](examples/book/) | `book.html`, `book.css`, `book-classical.css` | Named pages (`full`, `clean`), left/right margin boxes with `string(heading)` + page counters, TOC with `target-counter(h2-counter)` + leaders, custom page sizes (`148mm 210mm`), `@font-face` in subfolder, two stylesheet variants |
+| [`book-classical.css`](examples/book/book-classical.css) | alt stylesheet | Classical TOC with `leader('.')` dots + `target-text()` / `target-counter()` |
+| [`invoice/`](examples/invoice/) | `invoice.html`, `invoice.css` | Business invoice layout, `@page` footer margin boxes, `@font-face`, CSS variables, table styling |
+| [`letter/`](examples/letter/) | `letter.html`, `style.css` | Letterhead with background images, `@font-face` from `fonts/`, `leader(dotted)`, zero-margin `@page` |
+| [`poster/`](examples/poster/) | `poster.html`, `poster.css`, `flyer.css`, `common.css` | Large fixed page size (`278mm 388mm`), `@import` shared CSS, same HTML + different `-s` stylesheet for poster vs flyer |
+| [`ticket/`](examples/ticket/) | `ticket.html`, `ticket.css` | Fixed landscape ticket (`size: landscape`, `height: 8cm`), barcode font (`Libre Barcode`), flex layout, multi-column sections |
+
+### When to read which sample
+
+| Your task | Start here | Pair with |
+|-----------|------------|-----------|
+| Report with TOC + running headers | `examples/report/report.css` § `#contents`, `@page` | `css-toc-headers.md` |
+| Multi-column body text | `examples/report/report.css` § `#columns section` | `css-paged-media.md` |
+| Book/chapter with named pages | `examples/book/book.css` — `page: full`, `page: clean` | `css-paged-media.md` |
+| Classical dotted TOC | `examples/book/book-classical.css` § TOC | `css-toc-headers.md` |
+| Invoice / receipt | `examples/invoice/` | `pdf-a-archival.md` if PDF/A |
+| Event poster or flyer (custom dimensions) | `examples/poster/` — note `-s` flag for CSS swap | `css-paged-media.md` |
+| Ticket / badge / label (small fixed size) | `examples/ticket/ticket.css` | — |
+| Branded letter on letterhead | `examples/letter/style.css` | `css-fonts.md` |
 
 ---
 
@@ -183,7 +212,7 @@ Policy: [`full-docs/manifest.md`](full-docs/manifest.md)
 START → scope unclear? → READ THIS FILE
   ├─ Untrusted HTML ──────► security-untrusted-html.md → security-url-fetcher.md
   ├─ Install / DLL ───────► install-{platform}.md → install-troubleshooting.md
-  ├─ Document type ───────► examples/index.md → sample + css-* lesson
+  ├─ Document type ───────► examples/ sample + css-* lesson (catalog above)
   ├─ PDF variant ─────────► pdf-*.md
   ├─ Web app / auth ──────► web-flask-django.md
   ├─ CSS ≠ browser ───────► css-browser-vs-print.md

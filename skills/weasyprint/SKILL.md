@@ -28,7 +28,7 @@ Load **one** flat expert lesson from `references/` root (e.g. `security-untruste
 
 1. [`debug-pipeline.md`](references/debug-pipeline.md) — enable logging; unsupported CSS fails silently by default.
 2. [`css-browser-vs-print.md`](references/css-browser-vs-print.md) — print vs browser gaps?
-3. Closest sample in [`examples/index.md`](references/examples/index.md) — ≤120 lines of relevant `.css`.
+3. Closest sample from [`resource-matrix.md`](references/resource-matrix.md) Examples catalog — ≤120 lines of relevant `.css`.
 4. Still blocked? One matching flat lesson from the matrix. **`full-docs/` only as last resort** (≤120 lines/§).
 
 ## NEVER
