@@ -1,18 +1,28 @@
-# Dot-prefixed project folders (maintenance, audit, local tooling)
-.audit/
-.resources/
-.cursor/
+# Agent & AI assistant workspaces (local only)
+.agent/
 .agents/
+.cursor/
+.gemini/
+.windsurf/
+skills-lock.json
 
-# Agent instruction files (local / generated)
-AGENTS.md
-agent.md
-agents.md
+# Maintenance tooling — not published with skills
+.scripts/
+.notes/
+.audit/
 
-node_modules/
+# Per-skill maintenance (scrapers, evals — not published)
+.resources/
+
+# Python
+.venv/
 __pycache__/
 *.pyc
-.env
+
+# OS & editors
 .DS_Store
 Thumbs.db
-skills-lock.json
+Desktop.ini
+.vscode/
+.idea/
+*.log
