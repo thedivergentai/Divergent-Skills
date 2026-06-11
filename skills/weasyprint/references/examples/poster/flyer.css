@@ -1,0 +1,79 @@
+@import url(common.css);
+
+/* Page rules */
+
+@page {
+  margin: 3mm;
+  size: 100mm 140mm;
+}
+
+
+/* Style */
+
+#logo {
+  left: 2.1cm;
+  top: 0.7cm;
+  width: 55%;
+}
+
+#top-line {
+  font-size: 1em;
+  margin-top: 0.2cm;
+  margin-left: 0.1cm;
+}
+
+#main-title {
+  font-size: 0.86em;
+  margin-left: -0.1cm;
+  margin-top: 5cm;
+
+  p {
+    padding: 0.25cm;
+
+    &:last-of-type {
+      margin-right: -0.2cm;
+    }
+  }
+}
+
+#description {
+  display: none;
+}
+
+#date {
+  margin-top: 0.7cm;
+
+  article {
+    margin-left: 0.8cm;
+
+    &:first-child {
+      > p:first-child {
+        font-size: 1.2em;
+      }
+
+      > p:last-of-type {
+        font-size: 2em;
+      }
+    }
+
+    &:last-of-type {
+      > p:first-child {
+        font-size: 0.9em;
+      }
+
+      > p:last-of-type {
+        font-size: 2.3em;
+      }
+    }
+  }
+}
+
+#sponsors img {
+  max-height: 40px;
+  max-width: 100px;
+}
+
+#address {
+  font-size: 0.6em;
+  text-align: center;
+}

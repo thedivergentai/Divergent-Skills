@@ -1,0 +1,18 @@
+# Dot-prefixed project folders (maintenance, audit, local tooling)
+.audit/
+.resources/
+.cursor/
+.agents/
+
+# Agent instruction files (local / generated)
+AGENTS.md
+agent.md
+agents.md
+
+node_modules/
+__pycache__/
+*.pyc
+.env
+.DS_Store
+Thumbs.db
+skills-lock.json
