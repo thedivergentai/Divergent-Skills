@@ -1,4 +1,4 @@
-# WeasyPrint Install Troubleshooting
+﻿# WeasyPrint Install Troubleshooting
 
 **When to load**: Import/runtime failure after install — `cannot load library`, blank PDFs, tofu text, or version mismatch.
 
@@ -61,6 +61,9 @@ Search [existing issues](https://github.com/Kozea/WeasyPrint/issues) first. New 
 - **WSL vs native Windows confusion** — different Pango stacks; fix the environment actually running Python.
 - **Ignoring stderr CSS warnings** — missing stylesheets look like “install” problems but are URL/base_url bugs.
 
+- **pip alone is not enough:** after `pip install weasyprint`, run `python -m weasyprint --info`. If it fails on `libgobject`/`libpango` before printing versions, fix native libs (Windows MSYS2 / macOS brew / Linux distro packages) — do not keep reinstalling the wheel.
+
 ---
 ## Further research
 Official stable documentation: [Troubleshooting](https://doc.courtbouillon.org/weasyprint/stable/first_steps.html#troubleshooting), [Missing Library](https://doc.courtbouillon.org/weasyprint/stable/first_steps.html#missing-library), [Missing Fonts](https://doc.courtbouillon.org/weasyprint/stable/first_steps.html#missing-fonts)
+

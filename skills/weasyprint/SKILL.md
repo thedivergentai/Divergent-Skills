@@ -1,4 +1,4 @@
----
+﻿---
 name: weasyprint
 description: >-
   WeasyPrint HTML/CSS-to-PDF expert skill (Kozea/CourtBouillon). CLI, Python API,
@@ -51,6 +51,7 @@ Load **one** flat expert lesson from `references/` root (e.g. `security-untruste
 | Tofu / blank text | `css-fonts.md` |
 | Broken relative assets | `python-instantiation.md` (`base_url=`) |
 | Styles ≠ browser | `css-browser-vs-print.md` |
+| Dual screen+print dashboard (nav/hover) | Prefer flex; no hover-only content; `@media print` hides screen chrome; `css-browser-vs-print.md` |
 | Auth assets 404 | `web-flask-django.md` |
 | PDF/A rejected | `pdf-a-archival.md` |
 | SSRF / file read | `security-url-fetcher.md` |
@@ -70,3 +71,4 @@ Load **one** flat expert lesson from `references/` root (e.g. `security-untruste
 - **Versions**: major bumps change **rendering** — see `debug-version-upgrades.md`; visual diff PDFs on upgrade.
 - **Performance**: cascade cost ∝ selectors × elements; multi-page tables are slow — see `web-performance.md`.
 - **Defaults**: `presentational_hints=False`; `finisher(document, pdf)` hooks pydyf before trailer.
+

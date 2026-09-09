@@ -1,4 +1,4 @@
-# WeasyPrint Install — Windows
+﻿# WeasyPrint Install — Windows
 
 **When to load**: Windows workstation or server — choosing between standalone exe vs Python library.
 
@@ -60,6 +60,9 @@ Community [WeasyPrint-netcore](https://github.com/balbarak/WeasyPrint-netcore) e
 - **Forgetting env var in services** — IIS, Task Scheduler, and Docker Windows need DLL path in service env, not developer cmd.
 - **Expecting exe + pip mix** — exe does not replace `import weasyprint` in your venv.
 
+- **RyanPC 2026-09-07 check:** `pip`/`weasyprint` may be on PATH while MSYS2 is absent. Confirm native stack before debugging CSS: `Test-Path C:\msys64\mingw64\bin\libgobject-2.0-0.dll` must be `True`; if `False`, `WEASYPRINT_DLL_DIRECTORIES=C:/msys64/mingw64/bin` cannot help until MSYS2 + `mingw-w64-x86_64-pango` are installed. Symptom matches `cannot load library 'libgobject-2.0-0'` (error 0x7e).
+
 ---
 ## Further research
 Official stable documentation: [Installation — Windows](https://doc.courtbouillon.org/weasyprint/stable/first_steps.html#windows), [Troubleshooting — Missing Library](https://doc.courtbouillon.org/weasyprint/stable/first_steps.html#missing-library)
+
